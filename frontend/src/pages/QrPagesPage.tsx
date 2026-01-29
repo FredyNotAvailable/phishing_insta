@@ -8,7 +8,7 @@ const ExternalLinkIcon = () => (
 
 const QrCard = ({ title, path, color, logo }: { title: string; path: string; color: string; logo?: string }) => {
     // Explicitly use the local IP for the QR code value so it works on mobile
-    const fullUrl = `http://172.16.82.121:5173${path}`;
+    const fullUrl = `http://localhost${path}`;
 
     return (
         <Card borderRadius="xl" overflow="hidden" variant="outline" bg="white" boxShadow="sm">
@@ -104,6 +104,15 @@ export const QrPagesPage = () => {
                     color="purple"
                     logo="https://images.seeklogo.com/logo-png/45/1/sonesta-logo-png_seeklogo-451426.png"
                 />
+
+                <QrCard
+                    title="Facebook Login"
+                    path="/facebook"
+                    color="facebook"
+                    logo="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                />
+
+
             </SimpleGrid>
         </Box>
     );

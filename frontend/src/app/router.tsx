@@ -6,6 +6,8 @@ import { QrPagesPage } from '../pages/QrPagesPage';
 import { SpotifyPage } from '../pages/public/spotify/SpotifyPage';
 import { InstagramPage } from '../pages/public/instagram/InstagramPage';
 import { PrizePage } from '../pages/public/premio/PrizePage';
+import { FacebookPage } from '../pages/public/facebook/FacebookPage';
+
 import { MainLayout } from '../shared/ui/MainLayout';
 
 export const router = createBrowserRouter([
@@ -45,6 +47,10 @@ export const router = createBrowserRouter([
     {
         path: '/premio',
         element: <PrizePage />,
+    },
+    {
+        path: '/facebook',
+        element: <FacebookPage />,
     },
     // Generic fallback
     {

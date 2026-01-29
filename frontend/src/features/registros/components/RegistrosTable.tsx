@@ -74,7 +74,8 @@ const PasswordCell = ({ password }: { password?: string }) => {
     );
 };
 
-export const RegistrosTable = ({ registros, onDeleteSuccess }: Props) => {
+export const RegistrosTable = ({ registros /*, onDeleteSuccess*/ }: Props) => {
+    /*
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [selectedId, setSelectedId] = useState<number | null>(null);
     const { deleteRegistro } = useRegistros();
@@ -117,6 +118,7 @@ export const RegistrosTable = ({ registros, onDeleteSuccess }: Props) => {
             }
         }
     };
+    */
 
     return (
         <>
@@ -128,7 +130,7 @@ export const RegistrosTable = ({ registros, onDeleteSuccess }: Props) => {
                             <Th>Página</Th>
                             <Th>Email</Th>
                             <Th>Password</Th>
-                            <Th width="50px">Acción</Th>
+                            {/* <Th width="50px">Acción</Th> */}
                         </Tr>
                     </Thead>
                     <Tbody>
@@ -151,7 +153,7 @@ export const RegistrosTable = ({ registros, onDeleteSuccess }: Props) => {
                                 <Td>
                                     <PasswordCell password={registro.password} />
                                 </Td>
-                                <Td>
+                                {/* <Td>
                                     <IconButton
                                         aria-label="Eliminar registro"
                                         icon={<DeleteIcon />}
@@ -160,7 +162,7 @@ export const RegistrosTable = ({ registros, onDeleteSuccess }: Props) => {
                                         variant="ghost"
                                         onClick={() => handleDeleteClick(registro.id)}
                                     />
-                                </Td>
+                                </Td> */}
                             </Tr>
                         ))}
                         {registros.length === 0 && (
@@ -174,7 +176,7 @@ export const RegistrosTable = ({ registros, onDeleteSuccess }: Props) => {
                 </Table>
             </TableContainer>
 
-            <Modal isOpen={isOpen} onClose={onClose}>
+            {/* <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>Eliminar Registro</ModalHeader>
@@ -192,7 +194,7 @@ export const RegistrosTable = ({ registros, onDeleteSuccess }: Props) => {
                         </Button>
                     </ModalFooter>
                 </ModalContent>
-            </Modal>
+            </Modal> */}
         </>
     );
 };

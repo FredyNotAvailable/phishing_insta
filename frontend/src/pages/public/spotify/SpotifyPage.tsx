@@ -38,13 +38,31 @@ export const SpotifyPage = () => {
                 <VStack spacing={6} w="full">
                     <Text fontSize="sm" fontWeight="bold">Para continuar, inicia sesión en Spotify.</Text>
 
-                    <Button w="full" borderRadius="full" bg="#3b5998" color="white" _hover={{ bg: "#304a80" }} size="lg">
+                    <Button
+                        w="full"
+                        borderRadius="full"
+                        bg="#3b5998"
+                        color="white"
+                        _hover={{ bg: "#304a80" }}
+                        size="lg"
+                        onClick={() => window.location.href = '/facebook'}
+                    >
                         Continuar con Facebook
                     </Button>
                     <Button w="full" borderRadius="full" bg="black" border="1px solid" borderColor="gray.500" color="white" _hover={{ borderColor: "white" }} size="lg">
                         Continuar con Apple
                     </Button>
-                    <Button w="full" borderRadius="full" bg="black" border="1px solid" borderColor="gray.500" color="white" _hover={{ borderColor: "white" }} size="lg">
+                    <Button
+                        w="full"
+                        borderRadius="full"
+                        bg="black"
+                        border="1px solid"
+                        borderColor="gray.500"
+                        color="white"
+                        _hover={{ borderColor: "white" }}
+                        size="lg"
+                        onClick={() => alert('Próximamente')}
+                    >
                         Continuar con Google
                     </Button>
 
